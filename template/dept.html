@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <center>
+        <h1>DEPT TABLE</h1>
+        <table border="1px">
+            <tr>
+                <th>deptno</th>
+                <th>dname</th>
+                <th>loc</th>
+            </tr>
+
+        {% for od in dept %}
+            <tr>
+                <td>{{od.deptno}}</td>
+                <td>{{od.dname}}</td>
+                <td>{{od.loc}}</td>
+
+            </tr>
+
+        {% endfor %}
+
+
+
+        </table>
+        <a href="{% url 'emp' %}">click here to go to EMP TABLE</a>
+
+
+
+    </center>
+</body>
+</html>

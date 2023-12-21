@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1
+        {
+            background-color: blue;
+            color: aliceblue;
+            display: inline;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        table
+        {margin: 40px;
+            border: 2px solid black;
+            color: brown;
+            background-color: beige;
+            padding: 10px;
+        }
+        th
+        {
+            padding: 10px;
+        }
+        td
+        {
+            padding: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1>
+            EMP TABLE
+        </h1>
+        <table border="1px">
+            <tr>
+                <th>empno</th>
+                <th>ename</th>
+                <th>job</th>
+                <th>mgr</th>
+                <th>sal</th>
+                <th>hiredate</th>
+                <th>deptno</th>
+            </tr>
+
+        {% for oe in emp %}
+            <tr>
+                <td>{{oe.empno}}</td>
+                <td>{{oe.ename}}</td>
+                <td>{{oe.job}}</td>
+                <td>{{oe.mgr}}</td>
+                <td>{{oe.sal}}</td>
+                <td>{{oe.hiredate}}</td>
+                <td>{{oe.deptno}}</td>
+
+            </tr>
+
+        {% endfor %}
+
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+        <a href="{% url 'dept' %}"> click here to go to DEPT TABLE</a>
+
+
+
+
+    </center>
+    
+</body>
+</html>
